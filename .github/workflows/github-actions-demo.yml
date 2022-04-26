@@ -11,10 +11,11 @@ jobs:
         uses: actions/checkout@v3
       - run: echo "the ${{ github.repository }} repository has cloned to the runner."
       - run: echo "the workflow is now ready to test your code on the runner."
+      - run: echo "this is the new test repo."  
       - name: list files in the repository 
         run: |
           ls ${{ github.workspace }}
-          cat ${{ hello.txt }}
+          #cat ${{ hello.txt }}
     # - name: read out the files in the repository  
     # - run: |
          #cat ${{ hello1.txt}}   
