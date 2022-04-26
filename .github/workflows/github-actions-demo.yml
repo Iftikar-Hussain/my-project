@@ -1,17 +1,20 @@
 name: learn-github-actions
 on: [push]
 jobs:
-  check-bats-version:
+  Explore-Github-Actions: 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
-      - name: list the files in the repository
+      - run: echo "this job was automatically triggered by a ${{ github.event_name }} event. "
+      - run: echo "this job is now running on a ${{ runner.os }} server hosted by Github!"
+      - run: echo "the name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Checkout repository code
+        uses: actions/checkout@v3
+      - run: echo "the ${{ github.repository }} repository has cloned to the runner."
+      - run: echo "the workflow is now ready to test your code on the runner."
+      - name: list files in the repository 
         run: |
-          ls ${{ github.workspace }} 
+          ls ${{ github.workspace }}
+      - run: echo " this job's status is ${{ job.status }}."
+
         
                 
