@@ -10,7 +10,7 @@ jobs:
       - name: Checkout repository code
         uses: actions/checkout@v3
       - run: echo "the ${{ github.repository }} repository has cloned to the runner."
-      - run: echo "the workflow is now ready  iftikhar hussain lone to test your code on the runner."
+      - run: echo "the workflow is now ready test your code on the runner."
         # - run: echo "this is the new test repo."  
       - name: list files in the repository 
         run: |
