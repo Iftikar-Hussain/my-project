@@ -10,3 +10,8 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
+      - name: list the files in the repository
+        run: |
+          ls ${{ github.workspace }} 
+      - run: echo this job's status is ${{ job.status }}.   
+                
