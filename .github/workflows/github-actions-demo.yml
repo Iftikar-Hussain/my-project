@@ -14,9 +14,9 @@ jobs:
       - name: list files in the repository 
         run: |
           ls ${{ github.workspace }}
-      - name: read out the files in the repository  
-      - run: |
-          cat ${{ hello1.txt}}   
+    # - name: read out the files in the repository  
+    # - run: |
+         #cat ${{ hello1.txt}}   
       - run: echo " this job's status is ${{ job.status }}."
       
         
